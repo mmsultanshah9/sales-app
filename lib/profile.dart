@@ -14,7 +14,7 @@ class Profilepage extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue
+                  color: Colors.blue,
                 ),
                 height: 140,
                 child: Row(
@@ -77,13 +77,24 @@ class Profilepage extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
                 ),
+
                 height: 40,
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Edit profile",
-                    style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Icon(Icons.person_outlined, color: Colors.black),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 3.0, left: 12.0),
+                        child: Text(
+                          "Edit profile",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                      Spacer(),
+                      Icon(Icons.chevron_right, color: Colors.black),
+                    ],
                   ),
                 ),
               ),
@@ -99,9 +110,19 @@ class Profilepage extends StatelessWidget {
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Change password",
-                    style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Icon(Icons.password_outlined),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 3.0, left: 12.0),
+                        child: Text(
+                          "Change password",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                      Spacer(),
+                      Icon(Icons.chevron_right, color: Colors.black),
+                    ],
                   ),
                 ),
               ),
@@ -117,9 +138,19 @@ class Profilepage extends StatelessWidget {
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Notifications",
-                    style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Icon(Icons.notifications_outlined),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 3.0, left: 12.0),
+                        child: Text(
+                          "Notifications",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                      Spacer(),
+                      Icon(Icons.chevron_right, color: Colors.black),
+                    ],
                   ),
                 ),
               ),
@@ -135,9 +166,24 @@ class Profilepage extends StatelessWidget {
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Setting",
-                    style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.settings_outlined
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 2.0,
+                          left: 12.0
+                        ),
+                        child: Text("Setting", style: TextStyle(color: Colors.black)
+                        ),
+                      ),
+                      Spacer(),
+                      Icon(
+                        Icons.chevron_right
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -153,9 +199,26 @@ class Profilepage extends StatelessWidget {
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Help & Support",
-                    style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.help_center_outlined
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 2.0,
+                          left: 12.0
+                        ),
+                        child: Text(
+                          "Help & Support",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                      Spacer(),
+                      Icon(
+                        Icons.chevron_right
+                      ),
+                    ],
                   ),
                 ),
               ),
