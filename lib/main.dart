@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sales_app/profile.dart';
+import 'package:sales_app/home.dart';
+
 
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Profilepage(),
+      home: Homepage(),
     );
   }
 }
