@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales_app/utils/app_strings.dart';
 
 class Profilepage extends StatelessWidget {
   const Profilepage({super.key});
@@ -88,7 +89,7 @@ class Profilepage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 3.0, left: 12.0),
                         child: Text(
-                          "Edit profile",
+                          AppStrings.editprofile,
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
@@ -114,9 +115,9 @@ class Profilepage extends StatelessWidget {
                     children: [
                       Icon(Icons.password_outlined),
                       Padding(
-                        padding: const EdgeInsets.only(top: 3.0, left: 12.0),
+                        padding: const EdgeInsets.only(top: 2.0, left: 12.0),
                         child: Text(
-                          "Change password",
+                          AppStrings.changepass,
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
@@ -144,7 +145,7 @@ class Profilepage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 3.0, left: 12.0),
                         child: Text(
-                          "Notifications",
+                          AppStrings.notification,
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
@@ -168,21 +169,16 @@ class Profilepage extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.settings_outlined
-                      ),
+                      Icon(Icons.settings_outlined),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 2.0,
-                          left: 12.0
-                        ),
-                        child: Text("Setting", style: TextStyle(color: Colors.black)
+                        padding: const EdgeInsets.only(top: 2.0, left: 12.0),
+                        child: Text(
+                          AppStrings.setting,
+                          style: TextStyle(color: Colors.black),
                         ),
                       ),
                       Spacer(),
-                      Icon(
-                        Icons.chevron_right
-                      ),
+                      Icon(Icons.chevron_right),
                     ],
                   ),
                 ),
@@ -201,23 +197,16 @@ class Profilepage extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.help_center_outlined
-                      ),
+                      Icon(Icons.help_center_outlined),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 2.0,
-                          left: 12.0
-                        ),
+                        padding: const EdgeInsets.only(top: 2.0, left: 12.0),
                         child: Text(
-                          "Help & Support",
+                          AppStrings.help,
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
                       Spacer(),
-                      Icon(
-                        Icons.chevron_right
-                      ),
+                      Icon(Icons.chevron_right),
                     ],
                   ),
                 ),
@@ -233,7 +222,10 @@ class Profilepage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {},
-                child: Text("logout", style: TextStyle(color: Colors.white)),
+                child: Text(
+                  AppStrings.btnlogout,
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ],

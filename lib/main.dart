@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sales_app/profile.dart';
 
 
-
 void main() {
   runApp(const MyApp());
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales_app/utils/app_strings.dart';
 
 class Loginscreen extends StatelessWidget {
   const Loginscreen({super.key});
@@ -7,57 +8,62 @@ class Loginscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(80.0),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(80.0),
 
-          child: Card(
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.all(60.0),
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 80,
-                    backgroundImage: AssetImage("assets/images/images.png"),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    "Welcome back to profile",
-                    style: TextStyle(color: Colors.black, fontSize: 20),
-                  ),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Email",
-                      hintText: "Enter your Email",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
+            child: Card(
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.all(60.0),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 80,
+                      backgroundImage: AssetImage("assets/images/images.png"),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      AppStrings.logintxt,
+                      style: TextStyle(color: Colors.black, fontSize: 20),
+                    ),
+                    SizedBox(height: 20),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: AppStrings.emaillabel,
+                        hintText: AppStrings.emailhint,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Password",
-                      hintText: "Enter your Password",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
+                    SizedBox(height: 20),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: AppStrings.passlabel,
+                        hintText: AppStrings.passhint,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepPurple,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(20),
+                    SizedBox(height: 20),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadiusGeometry.circular(20),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        AppStrings.loginbutton,
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    onPressed: () {},
-                    child: Text("login", style: TextStyle(color: Colors.white)),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

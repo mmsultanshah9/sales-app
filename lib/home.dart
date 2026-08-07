@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sales_app/utils/app_strings.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -15,17 +16,17 @@ class Homepage extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(10)
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Row(
                   children: [
                     Text(
-                      "Wellcome to home page",
+                      AppStrings.hometxt,
                       style: TextStyle(color: Colors.black, fontSize: 25),
                     ),
-                
+
                     Spacer(),
-                
+
                     IconButton(
                       onPressed: () {},
                       icon: Icon(Icons.shopping_bag_outlined),
@@ -44,7 +45,7 @@ class Homepage extends StatelessWidget {
                 child: TextFormField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search),
-                    labelText: "Search Products....",
+                    labelText: AppStrings.txtformfleald,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
@@ -62,19 +63,8 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {},
-                    child: Text("All", style: TextStyle(color: Colors.black)),
-                  ),
-                  SizedBox(width: 10),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(20),
-                      ),
-                    ),
-                    onPressed: () {},
                     child: Text(
-                      "Wearables",
+                      AppStrings.all,
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
@@ -87,19 +77,8 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {},
-                    child: Text("Audio", style: TextStyle(color: Colors.black)),
-                  ),
-                  SizedBox(width: 10),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(20),
-                      ),
-                    ),
-                    onPressed: () {},
                     child: Text(
-                      "Footweer",
+                      AppStrings.wearables,
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
@@ -112,7 +91,32 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {},
-                    child: Text("Bages", style: TextStyle(color: Colors.black)),
+                    child: Text(AppStrings.audio, style: TextStyle(color: Colors.black)),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(20),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      AppStrings.foot,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(20),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(AppStrings.bages, style: TextStyle(color: Colors.black)),
                   ),
                 ],
               ),
@@ -126,26 +130,22 @@ class Homepage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
+              Row(children: [Text(AppStrings.coffee)]),
+              SizedBox(height: 5),
               Row(
                 children: [
-                  Text("Coffee Maker"),
+                  Icon(
+                    Icons.star_border_purple500,
+                    color: Colors.yellow,
+                    size: 20,
+                  ),
+                  SizedBox(width: 5),
+                  Text(AppStrings.rating),
                 ],
               ),
-              SizedBox(height: 5,),
-              Row(
-                children: [
-                  Icon(Icons.star_border_purple500, color: Colors.yellow, size: 20 ),
-                  SizedBox(width: 5,),
-                  Text("4.1")
-                ],
-              ),
-              SizedBox(height: 5,),
-              Row(
-                children: [
-                  Text("\$33.99"),
-                ],
-              )
+              SizedBox(height: 5),
+              Row(children: [Text(AppStrings.price)]),
             ],
           ),
         ),
