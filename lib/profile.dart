@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sales_app/utils/app_strings.dart';
 
-class Profilepage extends StatelessWidget {
-  const Profilepage({super.key});
+class Profilescreen extends StatelessWidget {
+  const Profilescreen({super.key});
 
   @override
   Widget build(BuildContext context) {

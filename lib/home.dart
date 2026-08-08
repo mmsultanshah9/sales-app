@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sales_app/utils/app_strings.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class Homescreen extends StatelessWidget {
+  const Homescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +91,10 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {},
-                    child: Text(AppStrings.audio, style: TextStyle(color: Colors.black)),
+                    child: Text(
+                      AppStrings.audio,
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                   SizedBox(width: 10),
                   ElevatedButton(
@@ -116,7 +119,10 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {},
-                    child: Text(AppStrings.bages, style: TextStyle(color: Colors.black)),
+                    child: Text(
+                      AppStrings.bages,
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                 ],
               ),

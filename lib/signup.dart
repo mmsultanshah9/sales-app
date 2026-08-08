@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sales_app/utils/app_strings.dart';
 
-class Signuppage extends StatelessWidget {
-  const Signuppage({super.key});
+class Signupscreen extends StatelessWidget {
+  const Signupscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
