@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sales_app/utils/app_strings.dart';
 
 class Profilescreen extends StatelessWidget {
   const Profilescreen({super.key});
@@ -11,221 +10,231 @@ class Profilescreen extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            Card(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue,
-                ),
-                height: 140,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: CircleAvatar(
-                        radius: 50,
-                        backgroundImage: AssetImage("assets/images/images.png"),
-                      ),
+            Container(
+              color: Colors.black,
+              height: 200,
+              width: double.infinity,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(14.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.arrow_back, color: Colors.white),
+                        Text(
+                          "Account",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Icon(Icons.notification_add, color: Colors.white),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/images/image.png"),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    "Sultan shah",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    "Sultanshah12@gmail.com",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 10),
-            Row(
-              children: [
-                Expanded(
-                  child: Card(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.white70,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
+            Container(
+              height: 400,
+              width: double.infinity,
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                  ),
-                ),
-                SizedBox(width: 10),
-                Expanded(
-                  child: Card(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.white70,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(width: 10),
-                Expanded(
-                  child: Card(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.white70,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Card(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
 
-                height: 40,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.person_outlined, color: Colors.black),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 3.0, left: 12.0),
-                        child: Text(
-                          AppStrings.editprofile,
-                          style: TextStyle(color: Colors.black),
-                        ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.wallet, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("Wallet"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
                       ),
-                      Spacer(),
-                      Icon(Icons.chevron_right, color: Colors.black),
-                    ],
+                    ),
+
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.edit, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("edit profile"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Card(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                height: 40,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.password_outlined),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 2.0, left: 12.0),
-                        child: Text(
-                          AppStrings.changepass,
-                          style: TextStyle(color: Colors.black),
-                        ),
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.only(),
+                    ),
+
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.block, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("Blocks"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.only(),
+                    ),
+
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.task, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("Tasks"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
                       ),
-                      Spacer(),
-                      Icon(Icons.chevron_right, color: Colors.black),
-                    ],
+                    ),
+
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.local_activity, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("Activity"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Card(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                height: 40,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.notifications_outlined),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 3.0, left: 12.0),
-                        child: Text(
-                          AppStrings.notification,
-                          style: TextStyle(color: Colors.black),
-                        ),
+                  SizedBox(height: 20),
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
                       ),
-                      Spacer(),
-                      Icon(Icons.chevron_right, color: Colors.black),
-                    ],
+                    ),
+
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.settings, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("Setting"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Card(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                height: 40,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.settings_outlined),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 2.0, left: 12.0),
-                        child: Text(
-                          AppStrings.setting,
-                          style: TextStyle(color: Colors.black),
-                        ),
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.only(),
+                    ),
+
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.badge_rounded, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("level"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 214, 223, 228),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
                       ),
-                      Spacer(),
-                      Icon(Icons.chevron_right),
-                    ],
+                    ),
+
+                    child: Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Icon(Icons.favorite, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text("Favorite"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward),
+                        SizedBox(width: 5),
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Card(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                height: 40,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.help_center_outlined),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 2.0, left: 12.0),
-                        child: Text(
-                          AppStrings.help,
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.chevron_right),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            Card(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusGeometry.circular(20),
-                  ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  AppStrings.btnlogout,
-                  style: TextStyle(color: Colors.white),
-                ),
+                ],
               ),
             ),
           ],
